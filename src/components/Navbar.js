@@ -1,20 +1,23 @@
 import React, { Component } from "react";
-
 import { Link } from "react-router-dom";
+import logo from "./news-report.png";
+export class Navbar extends Component {
+  static propTypes = {};
 
-export default class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <a className="navbar-brand">
-              <Link
-                to="/"
-                style={{ color: "inherit", textDecoration: "inherit" }}
-              >
-                NewsChatter
-              </Link>
+            <a className="navbar-brand" href="/">
+              <img
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top mx-2"
+                alt=""
+              ></img>
+              NewsChatter
             </a>
             <button
               className="navbar-toggler"
@@ -27,73 +30,80 @@ export default class Navbar extends Component {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page">
-                    <Link
-                      to="/"
-                      style={{ color: "inherit", textDecoration: "inherit" }}
-                    >
-                      Home
-                    </Link>
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <a className="nav-link">
-                    <Link
-                      to="/entertainment"
-                      style={{ color: "inherit", textDecoration: "inherit" }}
-                    >
-                      Entertainment
-                    </Link>
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <a className="nav-link">
-                    <Link
-                      to="/health"
-                      style={{ color: "inherit", textDecoration: "inherit" }}
-                    >
-                      Health
-                    </Link>
-                  </a>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/"
+                    style={{ color: "white", textDecoration: "inherit" }}
+                  >
+                    Home
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link">
-                    <Link
-                      to="/sciene"
-                      style={{ color: "inherit", textDecoration: "inherit" }}
-                    >
-                      Science
-                    </Link>
-                  </a>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/entertainment"
+                    style={{ color: "white", textDecoration: "inherit" }}
+                  >
+                    Entertainment
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link">
-                    <Link
-                      to="/sports"
-                      style={{ color: "inherit", textDecoration: "inherit" }}
-                    >
-                      Sports
-                    </Link>
-                  </a>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/business"
+                    style={{ color: "white", textDecoration: "inherit" }}
+                  >
+                    Business
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link">
-                    <Link
-                      to="/technology"
-                      style={{ color: "inherit", textDecoration: "inherit" }}
-                    >
-                      Technology
-                    </Link>
-                  </a>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/health"
+                    style={{ color: "white", textDecoration: "inherit" }}
+                  >
+                    Health
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/science"
+                    style={{ color: "white", textDecoration: "inherit" }}
+                  >
+                    Science
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/sports"
+                    style={{ color: "white", textDecoration: "inherit" }}
+                  >
+                    Sports
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/technology"
+                    style={{ color: "inherit", textDecoration: "inherit" }}
+                  >
+                    Technology
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -104,87 +114,4 @@ export default class Navbar extends Component {
   }
 }
 
-// import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-// export class Navbar extends Component {
-//   static propTypes = {};
-
-//   render() {
-//     return (
-//       <div>
-//         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//           <div className="container-fluid">
-//             <Link className="navbar-brand" to="/">
-//               NewsChatter
-//             </Link>
-//             <button
-//               className="navbar-toggler"
-//               type="button"
-//               data-bs-toggle="collapse"
-//               data-bs-target="#navbarSupportedContent"
-//               aria-controls="navbarSupportedContent"
-//               aria-expanded="false"
-//               aria-label="Toggle navigation"
-//             >
-//               <span className="navbar-toggler-icon"></span>
-//             </button>
-//             <div
-//               className="collapse navbar-collapse"
-//               id="navbarSupportedContent"
-//             >
-//               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-//                 <li className="nav-item">
-//                   <a className="nav-link active" aria-current="page">
-//                     <Link
-//                       to="/"
-//                       style={{ color: "inherit", textDecoration: "inherit" }}
-//                     >
-//                       Home
-//                     </Link>
-//                   </a>
-//                 </li>
-//                 <li className="nav-item">
-//                   <a className="nav-link active" aria-current="page" href="/">
-//                     <Link
-//                       to="/entertainment"
-//                       style={{ color: "inherit", textDecoration: "inherit" }}
-//                     >
-//                       Entertainment
-//                     </Link>
-//                   </a>
-//                 </li>
-//                 <li className="nav-item">
-//                   <a className="nav-link active" aria-current="page" href="/">
-//                     General
-//                   </a>
-//                 </li>
-//                 <li className="nav-item">
-//                   <a className="nav-link active" aria-current="page" href="/">
-//                     Health
-//                   </a>
-//                 </li>
-//                 <li className="nav-item">
-//                   <a className="nav-link active" aria-current="page" href="/">
-//                     Science
-//                   </a>
-//                 </li>
-//                 <li className="nav-item">
-//                   <a className="nav-link active" aria-current="page" href="/">
-//                     Sports
-//                   </a>
-//                 </li>
-//                 <li className="nav-item">
-//                   <a className="nav-link active" aria-current="page" href="/">
-//                     Technology
-//                   </a>
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
-//         </nav>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Navbar;
+export default Navbar;
